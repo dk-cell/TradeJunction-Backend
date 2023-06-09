@@ -32,7 +32,7 @@ const payment = require("./controller/paymentController");
 const order = require("./controller/orderController");
 const chat = require("./controller/chatController");
 const message = require("./controller/messageController");
-const withdraw = require("./controller/withdrawController")
+const withdraw = require("./controller/withdrawController");
 
 app.use("/test", (req, res) => {
   res.send("Hello world!");
