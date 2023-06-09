@@ -9,8 +9,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000",
     credentials: true,
+    origin:
+      process.env.NODE_ENV === "production"
+        ? process.env.CLIENT_URL
+        : "http://localhost:3000",
   })
 );
 
